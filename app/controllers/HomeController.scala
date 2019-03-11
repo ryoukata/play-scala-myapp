@@ -19,7 +19,7 @@ class HomeController @Inject()(cc: MessagesControllerComponents) extends Message
   }
 
   def form() = Action { implicit  request =>
-    val form = myForm.bindFromRequest
+    val form = myform.bindFromRequest
     val data = form.get
     Ok(views.html.index(
       "name: " + data.name + ", pass: " + data.pass,
