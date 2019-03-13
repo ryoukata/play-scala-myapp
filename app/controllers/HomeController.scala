@@ -22,7 +22,7 @@ class HomeController @Inject()(cc: MessagesControllerComponents) extends Message
     val form = myform.bindFromRequest
     val data = form.get
     Ok(views.html.index(
-      "name: " + data.name + ", pass: " + data.pass,
+      "name: " + data.name + ", pass: " + data.pass  + ", radio:" + data.radio,
       form
     ))
   }
