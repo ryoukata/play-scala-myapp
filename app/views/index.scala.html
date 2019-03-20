@@ -1,5 +1,10 @@
-@(message: String)
+@(message: String, result: List[forms.PersonForm.PersonData])
 
 @main("Index Page", "Hello", "copyright 2019") {
   <p>@Html(message)</p>
+  <ul>
+    @for(item <- result) {
+      <li>@item.name: @item.mail (@item.tel)</li>
+    }
+  </ul>
 }
